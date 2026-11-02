@@ -3,7 +3,7 @@
   "name": "My OGC Building Blocks repository",
   "abstract": "This is an example text for the abstract. It should be short and to the point.\nA \"Tell me more\" link will appear if there is an additional description with a longer explanation.\n",
   "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2026-11-02T17:29:19.544541",
+  "modified": "2026-11-02T17:32:41.719878",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"862052921203373f8136e6f464e0dfdd693e79f5",
@@ -108,7 +108,7 @@
       "ldContext": "https://avillar.github.io/bblocks-nov-02-sample/build/annotated/bbr/template/my-road-model/context.jsonld",
       "resolvedSchemaProperties": "https://avillar.github.io/bblocks-nov-02-sample/build/annotated/bbr/template/my-road-model/resolvedProperties.json",
       "sourceFiles": "https://avillar.github.io/bblocks-nov-02-sample/_sources/my-road-model/",
-      "validationPassed": true,
+      "validationPassed": false,
       "testOutputs": "https://github.com/avillar/bblocks-nov-02-sample/blob/master/build/tests/bbr/template/my-road-model/",
       "documentation": {
         "markdown": {
