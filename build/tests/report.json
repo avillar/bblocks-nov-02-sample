@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.bbr.template.mySchema - My Schema",
       "bblockName": "My Schema",
       "bblockId": "ogc.bbr.template.mySchema",
-      "generated": "2026-11-02T17:27:57.164341+00:00",
+      "generated": "2026-11-02T17:29:20.697089+00:00",
       "result": true,
       "items": [
         {
@@ -91,12 +91,12 @@
                   "focusNodes": {
                     "<https://www.ogc.org/rules/template/#testValues>": {
                       "nodes": [
-                        "_:N6ecfbc419df34ff2ba19b95e8d85d63f"
+                        "_:Nf3980946930545bc81d39a1cfe1ca0e4"
                       ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/mySchema/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N6ecfbc419df34ff2ba19b95e8d85d63f\n"
+                  "message": "Focus nodes for _sources/mySchema/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nf3980946930545bc81d39a1cfe1ca0e4\n"
                 }
               ]
             }
@@ -192,13 +192,106 @@
       "title": "Validation report for ogc.bbr.template.my-road-model - Route",
       "bblockName": "Route",
       "bblockId": "ogc.bbr.template.my-road-model",
-      "generated": "2026-11-02T17:27:57.294122+00:00",
+      "generated": "2026-11-02T17:29:20.956539+00:00",
       "result": true,
-      "items": [],
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/template/my-road-model/example_1_1.json",
+            "url": "https://avillar.github.io/bblocks-nov-02-sample/build/tests/bbr/template/my-road-model/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/valencia-road.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 44,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<https://example.com/routes/valencia-turia-1>"
+                      ]
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <https://example.com/routes/valencia-turia-1>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "globalErrors": {},
       "counts": {
-        "total": 0,
-        "passed": 0,
+        "total": 1,
+        "passed": 1,
         "failed": 0
       }
     },
@@ -206,7 +299,7 @@
       "title": "Validation report for ogc.bbr.template.myFeature - Custom Feature",
       "bblockName": "Custom Feature",
       "bblockId": "ogc.bbr.template.myFeature",
-      "generated": "2026-11-02T17:27:57.580639+00:00",
+      "generated": "2026-11-02T17:29:21.070095+00:00",
       "result": true,
       "items": [
         {
@@ -307,23 +400,23 @@
                     "geojson:GeometryShape": {
                       "nodes": []
                     },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
                     "geojson:FeatureShape": {
                       "nodes": [
                         "<file:///github/workspace/f1>"
                       ]
                     },
-                    "geojson:LinkShape": {
-                      "nodes": []
-                    },
                     "geojson:GeometryShape/sh:or/rdf:first": {
                       "nodes": []
                     },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                    "geojson:LinkShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/f1>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n"
                 }
               ]
             }
@@ -418,23 +511,23 @@
                     "geojson:GeometryShape": {
                       "nodes": []
                     },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
                     "geojson:FeatureShape": {
                       "nodes": [
                         "<http://example.com/features/f1>"
                       ]
                     },
-                    "geojson:LinkShape": {
-                      "nodes": []
-                    },
                     "geojson:GeometryShape/sh:or/rdf:first": {
                       "nodes": []
                     },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                    "geojson:LinkShape": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <http://example.com/features/f1>\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:FeatureShape: <http://example.com/features/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n"
                 }
               ]
             }
